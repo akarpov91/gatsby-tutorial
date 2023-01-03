@@ -11,11 +11,32 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "gatsby": "^4.24.7",
+    "@mdx-js/react": "^2.1.5",
+    "gatsby": "^5.0.1",
+    "gatsby-plugin-image": "^3.0.0",
+    "gatsby-plugin-mdx": "^5.0.0",
+    "gatsby-plugin-sharp": "^5.0.0",
+    "gatsby-source-filesystem": "^5.0.0",
+    "gatsby-transformer-sharp": "^5.3.1",
+    "graphql": "^16.6.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.5",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-interactions": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/react": "^6.5.15",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.3.0"
   }
 }
