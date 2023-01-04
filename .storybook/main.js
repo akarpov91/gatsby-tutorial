@@ -6,8 +6,21 @@ module.exports = {
   addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
   framework: "@storybook/react",
   core: {
-    builder: "webpack5",
+    builder: "@storybook/builder-webpack5",
   },
+  babel: async (options) => ({
+    ...options,
+    presets: [
+      ...options.presets,
+      [
+        "@babel/preset-react",
+        {
+          runtime: "automatic",
+        },
+        "preset-react-jsx-transform",
+      ],
+    ],
+  }),
   webpackFinal: async (config) => {
     // Transpile Gatsby module because Gatsby includes un-transpiled ES6 code.
     config.module.rules[0].exclude = [
